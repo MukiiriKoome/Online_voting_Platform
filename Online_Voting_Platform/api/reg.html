@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration</title>
+    <script src="sweetalert.min.js"></script>
+    <link rel="stylesheet" href="../css/style_otp.css">
+    <style>
+        .ovm {
+            width: 100%;
+            position: absolute;
+            z-index: -1;
+            opacity: 0.5;
+            height: 100%;
+        }
+        #about{
+            text-decoration: none;
+            font-size: 30px;
+            color: black;
+            background-color: white;
+            border-radius: 4px;
+        }
+        #about:hover{
+            color:rgb(43, 216, 9)
+        }
+    </style>
+</head>
+<body>
+    <img src="../picture/OVM_5.jpg" alt="Online Voting Machine" class="ovm">
+    <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="about" href="about.html">About Us</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="about" href="iNotes.html">isAnyProblem</a>
+    <br><br><br><h1>Online Voting System</h1>
+    <center>
+        <h2>Verification of Email-Id</h2><br>
+        <form valign="middle" action="otp.php" method="POST" name="myform" onsubmit="return myfun()">
+            <input type="email" name="email" id="" placeholder="Enter Your Email-Id"><br><br><br>
+            <input type="submit" value="Verify Email" id="btn">
+        </form>
+    </center>
+    <script>
+        function myfun() {
+            var a = document.myform.email.value;
+            if (a.charAt(a.length - 4) != "." && a.charAt(a.length - 3) != ".") {
+                swal("Invalid Email-Id!", "Please Check your email id and Try Again!", "info");
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>

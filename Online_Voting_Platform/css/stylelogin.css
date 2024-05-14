@@ -1,0 +1,85 @@
+.ovm {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.4;
+    height:100%;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+@font-face{
+    font-family:"rosemay";
+    src:url(Rosemary.ttf);
+}
+h1 {
+    text-align: center;
+    font-size: 60px;
+    font-family:"rosemary";
+}
+
+h2 {
+    text-align: center;
+    font-size: 40px;
+    margin: 25px;
+}
+
+h3 {
+    text-align: center;
+    font-size: 32px;
+    font-family: "rosemary";
+}
+
+form {
+    text-align: center;
+    display: block;
+}
+
+#btn {
+    background-color: black;
+    color: white;
+    border: 2px black;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 150px;
+    transition-duration: 0.4s;
+}
+#btn:hover{
+    width: 300px;
+    background-color: rgb(78, 253, 131);
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: bold;
+    color:black;
+}
+
+input {
+    margin: 15px;
+    border-radius: 10px;
+    width: 400px;
+    height: 40px;
+    font-size: 25px;
+}
+
+select {
+    margin: 15px;
+    border-radius: 10px;
+    width: 400px;
+    height: 40px;
+    font-size: 25px;
+}
+#about{
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    border-radius: 4px;
+}
+#about:hover{
+    color:rgb(43, 216, 9)
+}

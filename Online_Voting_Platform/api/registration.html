@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Online Voting System</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="sweetalert.min.js"></script>
+</head>
+
+<body>
+    <img src="../picture/OVM_6.jpg" alt="Online Voting Machine" class="ovm">
+    <br><br><br>
+    <h1>Online Voting System</h1><br><br>
+    <hr>
+    <form action="register.php" method="POST" name="myform" onsubmit="return myfun()" enctype="multipart/form-data">
+        <h2>Registration</h2>
+        <input required type="text" name="name" id="" placeholder="Enter Your Name">
+        <input required type="tel" pattern="\+254[0-9]{9}"  name="mobile" id="" placeholder="Enter Your Mobile No.+254 (..)"><br>
+        <input required type="password" name="password" id="" placeholder="Enter your password">
+        <input required type="password" name="cpassword" id="" placeholder="Confirm your password"><br>
+        <input required type="text" name="address" id="" placeholder="Enter Your Address">
+        <input required type="tel" pattern="[1-9]{8}" name="ID" id="" placeholder="Enter Your ID No."><br>
+        <input required type="email" name="mail" id="" placeholder="Enter Your Email ID">
+        <input required type="tel" maxlength="4" name="dob" id="" placeholder="Enter Your DOB">
+        <br><br>
+        <h3>Upload image:</h3> <input required type="file" name="photo" id=""><br><br>
+        <h3>Select Your Role:</h3>
+        <select name="role">
+            <option value="1">Voter</option>
+            <option value="2">Group</option>
+        </select><br>
+        <input type="submit" value="Register" id="btn">
+        <h3>Already user?<a href="login.html">login here</a></h3>
+    </form>
+    <script>
+        function myfun() {
+            var a = document.myform.mail.value;
+            if (a.charAt(a.length - 4) != "." && a.charAt(a.length - 3) != ".") {
+                swal("Invalid Email-Id!", "Please Check your email id and Try Again!", "info");
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>
